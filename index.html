@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Common Validation</title>
+<title>validate.JS Demo</title>
 <!-- saved from url=(0014)about:internet -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="c/default.css">
 <link href="c/common_v7.css" rel="stylesheet" type="text/css">
 <link href="c/advSearch_v2.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="c/commonValidation.css" />
+<link rel="stylesheet" type="text/css" href="c/validate.css" />
 <!--<script type="text/javascript" src="js/nui2.0.js"></script>-->
 
 
@@ -18,10 +18,10 @@
 <div class="container">
         <div class="cbp-af-header">
             <div class="cbp-af-inner">
-                <h1><img class="dlogo" src="i/validateLogo.png"/> commonValidator</h1>
+                <h1><img class="dlogo" src="i/validateLogo.png"/> validate.JS</h1>
                 <nav>
                     <a style="color:#25E7D7; text-decoration:none" href="javascript:">Demo</a>
-                    <a href="https://github.com/naukri-engineering/commonValidator/blob/master/README.md">Documentation</a>
+                    <a href="https://github.com/naukri-engineering/validate/blob/master/README.md">Documentation</a>
                     <a href="https://github.com/naukri-engineering">Other Plugins</a>
                 </nav>
             </div>
@@ -32,7 +32,7 @@
 <div class="mgBox" id="msgBx">Errors</div>
 <div class="mgBox" id="msgBx2">Message</div>
 
-<form id="mF111" name="myFrm1" class="frm oh fl" action="index1.html" method="post">
+<form id="mF111" name="myFrm1" class="frm oh fl" action="#" method="post">
 	<h2>Form-1</h2><br />
 	<a href="javascript:" id="sAnc">Show two more fields</a>
     <a href="javascript:" id="hAnc" style="display:none">Hide</a>
@@ -145,7 +145,7 @@
 
 
 
-<form id="mF222" name="myFrm2" class="frm oh fr" action="index1.html" method="post">
+<form id="mF222" name="myFrm2" class="frm oh fr" action="#" method="post">
 <h2>Form-2</h2><br />
     <div class="row">
     	<label class="lbl" for="reqI">Required</label>
@@ -254,7 +254,7 @@
 
 <script type="text/javascript" src="j/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="j/commonErrorList.js"></script>
-<script type="text/javascript" src="j/commonValidation.js"></script>
+<script type="text/javascript" src="j/validate.js"></script>
 <script type="text/javascript">
 	//commonErrList[2009] = function(){if($n('#cst1I').val()<10){return 'Value can not be less than 10'}else{return false}};
 	commonErrList[3001] = function(){rtn=false; if($('#alpnumI').val()==''){rtn='Please fill the "Alphanumeric" field'};return {msg:rtn,id:'sctSbtId'}}
