@@ -1,4 +1,4 @@
-# CommonValidator ([Demo](http://naukri-engineering.github.io/commonValidator/))
+# validate.JS ([Demo](http://naukri-engineering.github.io/validate/))
 
 
 ## INTENT
@@ -17,7 +17,7 @@ To have a common validation framework throughout site with features like:
 
 ## STRUCTURE
 
-* **Prerequisites:** “jQuery Framework” and “commonValidation” javascript files.
+* **Prerequisites:** “jQuery Framework” and “validate.js” javascript files.
 * **Code Structure Divisions:**
 
 	* **HTML** (To structure the form fields and the error message placehoders)
@@ -29,7 +29,7 @@ To have a common validation framework throughout site with features like:
 
 1. **HTML**
 
-	* The form that needs to be validated using commonValidator, must have its “name” attribute specified.
+	* The form that needs to be validated using validate.js, must have its “name” attribute specified.
 	* The “name” and “id” attributes of all the form fields are not mandatory.
 	* To show inline error messages, there must be an element within the form which can be an html tag like `<div>`,`<span>`,`<p>`,`<i>`,`<b>` etc. Having its “id” attribute set as the “id” or “name” of the form field with which it is related, appended with “_err” and must have a class “erLbl” specified on it.  
 *Example:*  
@@ -85,7 +85,7 @@ OR
 
 	* The “parameters”  plugin are:
 
-		1. **formNames :** Accepts the form names on which commonValidator needs to       be initialized. Form name can be a string for a single form or an array of form names for multiple forms. At least one form name is mandatory.
+		1. **formNames :** Accepts the form names on which validate.JS needs to be initialized. Form name can be a string for a single form or an array of form names for multiple forms. At least one form name is mandatory.
 
 		2. **errors :** Accepts the name of the error message array. If not mentioned, the default name “commonErrList” of the array is set.
 
@@ -110,7 +110,7 @@ OR
 
 		8. **submitButton :** If the submit button is not of the type “submit” then set this parameter with the “id” of the submit button as a string.
 
-		9.	**fireDelay :** Accepts integer values(in milliseconds) to set a delay before firing the validation events. i.e. “fireDelay” set to 2000 will delay the execution of the commonValidator by 2 seconds.
+		9.	**fireDelay :** Accepts integer values(in milliseconds) to set a delay before firing the validation events. i.e. “fireDelay” set to 2000 will delay the execution of the validate.js by 2 seconds.
 
 		10.	**beforeSubmit :** Accepts a callback function to execute before submitting the form
 
@@ -304,7 +304,7 @@ Example:
 		`});`  
 
 9. **Server-Side Implementation**  
-To be able to use commonValidator’s script for server-side validation checks, the client(App) needs to provide a configuration to the server in the format given bellow:  <br />  
+To be able to use validate.js script for server-side validation checks, the client(App) needs to provide a configuration to the server in the format given bellow:  <br />  
 `object = {`  
 	`<field_name>:{`  
 `rel:"<validation_type>:<validation_code>,...",`  
