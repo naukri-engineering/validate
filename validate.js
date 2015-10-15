@@ -1,6 +1,6 @@
-/*
- * jQuery Common Validator
- *
+/* 
+ * validate.JS
+ * 
  * Copyright (c) 2014 Naukri.com (http://www.naukri.com)
  * Licensed under the MIT.
  * Uses the same license as jQuery, see:
