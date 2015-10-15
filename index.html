@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Common Validation</title>
+<!-- saved from url=(0014)about:internet -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="c/default.css">
+<link href="c/common_v7.css" rel="stylesheet" type="text/css">
+<link href="c/advSearch_v2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="c/commonValidation.css" />
+<!--<script type="text/javascript" src="js/nui2.0.js"></script>-->
+
+
+</head>
+
+<body>
+<div class="container">
+        <div class="cbp-af-header">
+            <div class="cbp-af-inner">
+                <h1><img class="dlogo" src="i/validateLogo.png"/> commonValidator</h1>
+                <nav>
+                    <a style="color:#25E7D7; text-decoration:none" href="javascript:">Demo</a>
+                    <a href="https://github.com/naukri-engineering/validate/blob/master/README.md">Documentation</a>
+                    <a href="https://github.com/naukri-engineering">Other Plugins</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+<br />
+<div style="width:910px; margin:0 auto; overflow:hidden">
+<div class="mgBox" id="msgBx">Errors</div>
+<div class="mgBox" id="msgBx2">Message</div>
+
+<form id="mF111" name="myFrm1" class="frm oh fl" action="index1.html" method="post">
+	<h2>Form-1</h2><br />
+	<a href="javascript:" id="sAnc">Show two more fields</a>
+    <a href="javascript:" id="hAnc" style="display:none">Hide</a>
+    <div id="shCond" style="display:none">
+        <div class="row">
+            <label class="lbl" for="reqI">Required</label>
+            <input class="inpTxt" type="text" id="reqI" name="reqN" rel="required:1001,num:1003,custom:3002" placeholder="Enter value"/>
+            <i class="erLbl" id="reqI_err">Err</i>
+        </div>
+        <div class="row">
+            <label class="lbl" for="alpI">Alpha</label>
+            <input class="inpTxt" type="text" id="alpI" name="alpN" rel="required:1001,alpha:1002|keyup,blur" placeholder="Enter value"/>
+            <i class="erLbl" id="alpI_err">Err</i>
+        </div>
+    </div>
+     <div class="row">
+    	<label class="lbl" for="numI">Numeric</label>
+    	<input class="inpTxt" type="text" id="numI" name="numN" rel="num:1003" placeholder="Enter value"/>
+        <i class="erLbl" id="numI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="alpnumI">Alphanumeric</label>
+    	<input class="inpTxt" type="text" id="alpnumI" name="alpnumN" rel="custom:5001" placeholder="Enter value"/>
+        <i class="erLbl" id="alpnumI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="alpdsI">Alpha with Dot &amp; Space</label>
+    	<input class="inpTxt" type="text" id="alpdsI" name="alpdsN" rel="alphaDS:1005|keyup,blur" placeholder="Enter Value"/>
+        <i class="erLbl" id="alpdsI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="emailI">Email</label>
+    	<input class="inpTxt" type="text" id="emailI" name="emailN" rel="email:1006|keyup,blur" placeholder="Enter Value"/>
+        <i class="erLbl" id="emailI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="splI">No Special Characters</label>
+    	<input class="inpTxt" type="text" id="splI" name="splN" rel="specialChar:1007|keyup,blur" placeholder="Enter Value"/>
+        <i class="erLbl" id="splI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="rngI">Range Input</label>
+    	<input class="inpTxt" type="text" id="rngI" name="rngN" minlength="5" maxlength="10" rel="softReq:1018,charRange:1008|keyup,blur" placeholder="Enter Value"/>
+        <i class="erLbl" id="rngI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="rngTI">Range Textarea</label>
+    	<textarea class="txtAra" id="rngTI" name="rngTN" scope="in" minlength="10" maxlength="15" rel="charRange:1009|keyup,blur" placeholder="Enter Value"></textarea>
+        <i class="erLbl" id="rngTI_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="optI">Select Option</label>
+        <select class="selBox" id="optI" name="optN" rel="custom:2012|blur,change" multiple="multiple">
+            <option value="-1">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <i class="erLbl" id="optI_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl">Select Radio</label>
+        <input type="radio" name="a" rel="checked:1011|click,blur"/>
+        <input type="radio" name="a" rel="checked:1011|click,blur"/>
+        <input type="radio" name="a" rel="checked:1011|click,blur"/>
+        <input type="radio" name="a" rel="checked:1011|click,blur"/>
+        <i class="erLbl" id="a_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="cBxI">Checkbox</label>
+        <input type="checkbox" id="cBxI" name="cBxN" rel="checked:1012|click,blur" placeholder="Enter Value0"/>
+        <i class="erLbl" id="cBxI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="cst1I">Custom Validation 1</label>
+    	<input class="inpTxt" type="text" id="cst1I" name="cst1N" rel="required:1013,num:1014,custom:2001,custom:2002|keyup,blur" placeholder="Enter Value1"/>
+        <i class="erLbl" id="cst1I_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="opt1I">Custom Validation 2</label>
+        <select class="selBox" id="opt1I" name="opt1N" rel="custom:2003|blur,change">
+            <option>Select</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <i class="erLbl" id="opt1I_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="reqI11">Required</label>
+        <input class="inpTxt" type="text" id="reqI11" name="reqN11" rel="specialChar:1007" placeholder="Spl Char Check Valid"/>
+        <i class="erLbl" id="reqI11_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="reqI12">Required</label>
+        <input class="inpTxt" type="text" id="reqI12" name="reqN12" rel="required:1001,num:1001" placeholder="Enter Value"/>
+        <i class="erLbl" id="reqI12_err">Err</i>
+    </div>
+    <div class="row">
+    	<i class="erLbl" id="sctSbtId"></i>
+    	<a href="javascript:void(0)" id="sBtnF1" class="fl btnLnk">Submit through AJAX<a/>
+        <input id="sBtnF11" class="fl btn" type="submit" value="Submit Button"/>
+    </div>
+    <a href="javascript:" id="addN">Add new field in the form</a>
+</form>
+
+
+
+
+
+<form id="mF222" name="myFrm2" class="frm oh fr" action="index1.html" method="post">
+<h2>Form-2</h2><br />
+    <div class="row">
+    	<label class="lbl" for="reqI">Required</label>
+    	<input class="inpTxt" type="text" id="reqIT" name="reqNT" rel="required:1001|keyup,blur"/>
+        <i class="erLbl" id="reqIT_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="alpI">Alpha</label>
+    	<input class="inpTxt" type="text" id="alpIT" name="alpNT" placeholder="Default alpN value" rel="alpha:1002|keyup,blur"/>
+        <i class="erLbl" id="alpIT_err">Err</i>
+    </div>
+     <div class="row">
+    	<label class="lbl" for="numI">Numeric</label>
+    	<input class="inpTxt" type="text" id="numI" name="numN" rel="num:1003|keyup,blur"/>
+        <i class="erLbl" id="numI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="numI">Float</label>
+    	<input class="inpTxt" type="text" id="fltI" name="fltN" rel="float:1019|keyup,blur"/>
+        <i class="erLbl" id="fltI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="numI">Value Range</label>
+    	<input class="inpTxt" type="text" id="rngVI" name="rngVN" minval="10" maxval="100" scope="in" rel="required:1001,float:1019,valRange:1020|keyup,blur"/>
+        <i class="erLbl" id="rngVI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="alpnumI">Alphanumeric</label>
+    	<input class="inpTxt" type="text" id="alpnumI" name="alpnumN" rel="alphanum:1004|keyup,blur"/>
+        <i class="erLbl" id="alpnumI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="alpdsI">Alpha with Dot &amp; Space</label>
+    	<input class="inpTxt" type="text" id="alpdsI" name="alpdsN" rel="alphaDS:1005|keyup,blur"/>
+        <i class="erLbl" id="alpdsI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="emailI">Email</label>
+    	<input class="inpTxt" type="text" id="emailI" name="emailN" rel="email:1006|keyup,blur"/>
+        <i class="erLbl" id="emailI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="splI">No Special Characters</label>
+    	<input class="inpTxt" type="text" id="splI" name="splN" rel="specialChar:1007|keyup,blur"/>
+        <i class="erLbl" id="splI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="rngI">Range Input</label>
+    	<input class="inpTxt" type="text" id="rngI" name="rngN" minL="5" maxL="10" scope="in" rel="charRange:1008|keyup,blur"/>
+        <i class="erLbl" id="rngI_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="rngTI">Range Textarea</label>
+    	<textarea class="txtAra" id="rngTI" name="rngTN" minlength="10" maxL="15" rel="required:1001,charRange:1009|keyup,blur"></textarea>
+        <i class="erLbl" id="rngTI_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="optI">Select Option</label>
+        <select class="selBox" id="optI" name="optN" rel="selected:1010|blur,change">
+            <option>Select</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <i class="erLbl" id="optI_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl">Select Radio</label>
+        <input class="radBtn" type="radio" name="a" rel="checked:1011|click,blur"/>
+        <input class="radBtn" type="radio" name="a" rel="checked:1011|click,blur"/>
+        <input class="radBtn" type="radio" name="a" rel="checked:1011|click,blur"/>
+        <input class="radBtn" type="radio" name="a" rel="checked:1011|click,blur"/>
+        <i class="erLbl" id="a_err">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="cBxI1">Checkbox</label>
+        <input type="checkbox" id="cBxI1" name="cBxN1" rel="checked:1012|click,blur"/>
+        <input type="checkbox" id="cBxI1" name="cBxN1" rel="checked:1012|click,blur"/>
+        <input type="checkbox" id="cBxI1" name="cBxN1" rel="checked:1012|click,blur"/>
+        <i class="erLbl" id="cBxN1_err">Err</i>
+    </div>
+    <div class="row">
+    	<label class="lbl" for="cst2I">Custom Validation 1</label>
+    	<input class="inpTxt" type="text" id="cst2I" name="cst2N" rel="custom:2008|keyup,blur"/>
+        <i class="erLbl" id="cst2IErrId">Err</i>
+    </div>
+    <div class="row">
+        <label class="lbl" for="opt2I">Custom Validation 2</label>
+        <select class="selBox" id="opt2I" name="opt2N" rel="custom:2007|blur,change">
+            <option>Select</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <i class="erLbl" id="cstErrId">Err</i>
+    </div>
+    <input class="fl btn" type="button" value="no Validate" id="noV1"  rel="noValidate"/>
+    <input class="fl btn" type="submit" value="SubmitForm(with 1sec delay)" name="checksbt" />
+    <input type="hidden" id="hdN1" name="hdI1" value="" />
+</form>
+</div>
+
+
+
+<script type="text/javascript" src="j/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="j/commonErrorList.js"></script>
+<script type="text/javascript" src="j/commonValidation.js"></script>
+<script type="text/javascript">
+	//commonErrList[2009] = function(){if($n('#cst1I').val()<10){return 'Value can not be less than 10'}else{return false}};
+	commonErrList[3001] = function(){rtn=false; if($('#alpnumI').val()==''){rtn='Please fill the "Alphanumeric" field'};return {msg:rtn,id:'sctSbtId'}}
+	var f1 = new commonValidator();
+	function cVFnc(){
+		f1.validate({
+			//formNames : ['myFrm1','myFrm2'],
+			formNames : 'myFrm1',
+			errors : commonErrList,
+			styles : {errorClass:'err',okClass:'ok',softMandClass:'softMand',parentObjectClass:'row',maxLevel:4},
+			clearOnFocus : false,
+			messageBox : {id:'msgBx',content: {customContent:'My custom content for the MsgBox',errorCount:'Total [errCount] errors found - Custom.',errorMessages:true}, hideOthers:false},
+			inlineErrors : true,
+			defaultEvents : ['blur','keyup'],
+			submitButton : ['sBtnF1','sBtnF2'],
+			fireDelay : 0,
+			beforeSubmit : function(){
+				console.log('Before Submit of Form-1 executed');
+                console.log("Form-1 validation status: ",f1.isValid());
+				// if(f1.isValid()){
+				// 	$('#mF111').get(0).submit();
+				// }
+			},
+			//disableSubmit : true
+		});
+	}
+	cVFnc();
+	
+	$('#sBtnF1').on('click',function(){
+		if(f1.isValid('mF111')){
+			f1.sanitizeDefaultValues($('#mF111')[0]);
+			f1.setDefaultValues($('#mF111')[0]);
+			alert('Form is valid. Execute AJAX.')
+			//Your ajax call here
+		}
+		else{alert('Form is not valid. No AJAX.')}
+	});
+	
+	
+	var testList1 = {
+		1001 : "This is a required field",
+        1010 : 'Please select an option',
+        1011 : 'Please select a radio button',
+        1012 : 'Please select the chechbox',
+        2008 : function(obj){return}
+	}
+	var testList = {};
+	testList = $.extend(testList,commonErrList,testList1);
+	var f2 = commonValidator().validate({
+		//formNames : ['myFrm1','myFrm2'],
+		formNames : 'myFrm2',
+		errors : testList,
+		styles : {errorClass:'err',okClass:'ok',softMandClass:'softMand'},
+		clearOnFocus : false,
+		messageBox : {id:'msgBx2', hideOthers:true},
+		inlineErrors : true,
+		submitButton : 'noV1',
+		fireDelay : 1000
+	});
+	
+	$('#sAnc').on('click',function(){
+		$(this).hide();
+		$('#hAnc').show();
+		$('#shCond').show();
+		f1.showElement(['reqI','alpI']);
+	});
+	$('#hAnc').on('click',function(){
+		$(this).hide();
+		$('#sAnc').show();
+		$('#shCond').hide();
+		f1.hideElement(['reqI','alpI']);
+		$('#shCond').find('.err').removeClass('err');
+	});
+	f1.hideElement(['reqI','alpI']);
+	
+	var idCounter = 120;
+	$('#addN').on('click',function(){
+		idCounter+=1;
+		var dT=$('<div>').attr({'class':'row'});
+		var inp=$('<input>').attr({'class':'inpTxt',type:'text',id:'reqI'+idCounter,name:'reqN'+idCounter,rel:"required:1001",'placeholder':'Custom Validation 12'});
+		var iT=$('<i>').attr({id:'reqI'+idCounter+'_err'}).addClass('erLbl');
+		dT.append(inp).append(iT);
+		$('#mF111').append(dT);
+		cVFnc();
+	});
+	
+	
+	
+	
+	f1.fillVal({
+		'numI' : "Some Prefill Value"
+	});
+	
+	/*var f3 = commonValidator().validate({
+		//formNames : ['myFrm1','myFrm2'],
+		formNames : 'myFrm3',
+		errors : testList,
+		styles : {errorClass:'err',okClass:'ok',softMandClass:'softMand'},
+		clearOnFocus : false,
+		messageBox : {id:'msgBx2', hideOthers:true},
+		inlineErrors : true,
+		submitButton : 'noV1',
+		fireDelay : 2000
+	});*/
+</script>
+<br /><br />
+</body>
+</html>

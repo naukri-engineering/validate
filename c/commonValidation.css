@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0;padding:0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px}
+.fl{float:left} .fr{float:right} .cl{clear:both;height:1px;font-size:1px}
+.oh{overflow:hidden} .woh{width:100%; overflow:hidden}
+.frm{margin:0;padding:20px; border:1px solid #666; width:400px; background:#f3f3ff}
+/*.ok{border:1px solid #0C3; background:#CEF2C8}*/
+/*.err{border:1px solid #F03; background:#FCC}*/
+/*.softMand{border:1px solid #F90; background:#FF9}*/
+i{font-size:11px; font-style:normal;background:none;border:none;display:none}
+i.err{color:#F03;display:block;background:none;border:none;}
+
+.row{margin:0; padding:0 0 10px 0; width:100%; overflow:hidden}
+.row .lbl{width:100%; display:block; padding:0 0 3px 0}
+.row .inpTxt, .row .selBox, .row .txtAra{width:330px; padding:6px 3px;font-size:11px}
+.btn{background: #c0c0c0; border:1px solid #999 !important; border-radius: 3px; margin-left:3px; color:#333;}
+.btnLnk{margin-top:13px;}
+.row i{font-size:11px; font-style:normal;display:none}
+
+.row .inpTxt.ok, .row .selBox.ok, .row .txtAra.ok, .row .chkBox.ok{border:1px solid #0C3; background:#CEF2C8}
+.row .inpTxt.err, .row .selBox.err, .row .txtAra.err, .row .chkBox.err{border:1px solid #F03; background:#FCC}
+.row .inpTxt.softMand, .row .selBox.softMand, .row .txtAra.softMand, .row .chkBox.softMand{border:1px solid #F90; background:#FF9}
+.row i.err{color:#F03;display:block}
+.row i.softMand{color:#F60;display:block}
+
+.row.ok .inpTxt, .row.ok .selBox, .row.ok .txtAra, .row.ok .chkBox{border:1px solid #0C3; background:#CEF2C8}
+.row.err .inpTxt, .row.err .selBox, .row.err .txtAra, .row.err .chkBox{border:1px solid #F03; background:#FCC; color:red}
+.row.err label{color:red}
+.row.softMand .inpTxt, .row.softMand .selBox, .row.softMand .txtAra, .row.softMand .chkBox{border:1px solid #F90; background:#FF9}
+.row.err i{color:#F03;display:block}
+.row.softMand i{color:#F60;display:block}
+
+.mgBox{display:none;background:#C00; border:1px solid #F00; padding:5px 10px; color:#fff; font-size:16px; margin:0 0 20px 0}
+.mgBox p,.mgBox ul li {color:#fff;}
+.mgBox p{padding:10px 0;}
