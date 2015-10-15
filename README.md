@@ -275,7 +275,7 @@ Example:
 `});`  
 
 6. **Getting validate status of the form if submit button is not of the type “submit”**  
-If submit button is not of the type “submit”, then to get the validate status of form on clicking the submit button, there is a function `“frmValidate.isValid(‘id’)”` where ‘id’ can be the id a form or an individual form element whose validation status needs to be checked. The function returns  “true” or “false”. If there is no error in the form or the individual field then value returned is “false” else the value is “true”.  
+If submit button is not of the type “submit”, then to get the validate status of form on clicking the submit button, there is a function `“frmValidate.isValid(‘id’)”` where ‘id’ can be the id a form or an individual form element whose validation status needs to be checked. The function returns  “true” or “false”. If there is no error in the form or the individual field then value returned is “true” else the value is “false”.  
 Example:  
 `$('#someButton').on('click',function(){`  
 	`if(frmValidate.isValid('formID')){alert('There is no error')}`  
