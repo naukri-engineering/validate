@@ -1,4 +1,4 @@
-# CommonValidator - [Demo](http://naukri-engineering.github.io/commonValidator/)
+# CommonValidator ([Demo](http://naukri-engineering.github.io/commonValidator/))
 
 
 ## INTENT
