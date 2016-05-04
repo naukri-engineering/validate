@@ -379,6 +379,8 @@ Example (Interpretation of “usernameConfirm” key shown in above example):
 `}`  
 `});`  
 
+#### CONTRIBUTOR
+* Tarunjeet Saini
 
 #### ACKNOWLEDGEMENTS
 This product uses jQuery, developed by jQuery Foundation and other contributors, https://jquery.org/. Contribution history is available at https://github.com/jquery/jquery.
